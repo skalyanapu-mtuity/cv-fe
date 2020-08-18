@@ -1,0 +1,24 @@
+<!-- <app-card-view [tweetData]="data"></app-card-view> -->
+<!-- Ideally we could create a re-usable component with input attributes -->
+<!-- Since we did not have use case re-use for assignment purpose, using direct template-->
+<div class="container" *ngIf="tweets.length > 0">
+    <div class="pb-5" *ngFor="let tweet of tweets">
+        <div class="card pb-2">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src={{tweet.includes.users[0].profile_image_url}} class="img img-rounded img-fluid" />
+                    </div>
+                    <div class="col-md-10">
+                        <p> 
+                            <!--Instead of tweeted by beneth to text, populating here for better experince-->
+                            <a class="float-left" href=""><strong>{{tweet.includes.users[0].name}}</strong></a>
+                        </p>
+                        <div class="clearfix"></div>
+                        <p>{{tweet.data.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container" *ngIf="tweetRecord.length > 0">
+	<div class="card">
+	    <div class="card-body">
+	        <div class="row">
+        	    <div class="col-md-2">
+        	        <img src="tweetRecord.imageURl" class="img img-rounded img-fluid"/>
+        	    </div>
+        	    <div class="col-md-10">
+        	        <p>
+        	            <a class="float-left" href=""><strong>{{tweetRecord.userName}}</strong></a>
+
+        	       </p>
+        	       <div class="clearfix"></div>
+        	        <p>{{tweetRecord.text}}</p>
+        	    </div>
+	        </div>
+	    </div>
+	</div>
+</div>
